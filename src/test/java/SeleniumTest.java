@@ -17,7 +17,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.JavascriptExecutor;
 
-public class OOPTest {
+public class SeleniumTest {
 
     private static StringBuilder foodClass;
 
@@ -28,7 +28,7 @@ public class OOPTest {
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver");//linux_64
 
         // Get file
-        File file = new File(".html");
+        File file = new File("src/main/java/index.html");
         String path = "file://" + file.getAbsolutePath();
 
         // Create a new ChromeDriver instance
