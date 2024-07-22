@@ -20,7 +20,8 @@ import org.openqa.selenium.JavascriptExecutor;
 public class SeleniumTest {
 
     private static StringBuilder foodClass;
-    private String path;
+    private WebDriver webDriver;
+   
 
     @BeforeEach
     public static void setUp() {
@@ -30,7 +31,7 @@ public class SeleniumTest {
 
         // Get file
         File file = new File("src/main/java/index.html");
-        path = "file://" + file.getAbsolutePath();
+        String path = "file://" + file.getAbsolutePath();
 
         // Create a new ChromeDriver instance
         ChromeOptions options = new ChromeOptions();
