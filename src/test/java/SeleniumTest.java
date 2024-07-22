@@ -20,6 +20,7 @@ import org.openqa.selenium.JavascriptExecutor;
 public class SeleniumTest {
 
     private static StringBuilder foodClass;
+    private String path;
 
     @BeforeEach
     public static void setUp() {
@@ -29,7 +30,7 @@ public class SeleniumTest {
 
         // Get file
         File file = new File("src/main/java/index.html");
-        String path = "file://" + file.getAbsolutePath();
+        path = "file://" + file.getAbsolutePath();
 
         // Create a new ChromeDriver instance
         ChromeOptions options = new ChromeOptions();
@@ -79,35 +80,35 @@ public class SeleniumTest {
 
 }
 
-// class TestingUtils {
-//     public static StringBuilder getFoodClass() {
-//         String filePath = "./src/main/java/index.js";
-//         String startPattern = "class FoodProduct";
-//         String endPattern = "/* Note: You do not need to edit or view any code below this point. */";
-//         StringBuilder contentBuilder = new StringBuilder();
-//         try {
-//             List<String> lines = Files.readAllLines(Paths.get(filePath));
+class TestingUtils {
+    public static StringBuilder getFoodClass() {
+        String filePath = "./src/main/java/index.js";
+        String startPattern = "class FoodProduct";
+        String endPattern = "/* Note: You do not need to edit or view any code below this point. */";
+        StringBuilder contentBuilder = new StringBuilder();
+        try {
+            List<String> lines = Files.readAllLines(Paths.get(filePath));
 
-//             boolean foundStart = false;
+            boolean foundStart = false;
 
-//             for (String line : lines) {
-//                 if (line.startsWith(startPattern)) {
-//                     foundStart = true;
-//                     contentBuilder.append(line).append("\n");
-//                 } else if (foundStart) {
-//                     if (line.endsWith(endPattern)) {
-//                         contentBuilder.append(line);
-//                         System.out.println(contentBuilder.toString());
-//                         foundStart = false;
-//                     } else {
-//                         contentBuilder.append(line).append("\n");
-//                     }
-//                 }
-//             }
-//         } catch (IOException e) {
-//             e.printStackTrace();
-//         }
+            for (String line : lines) {
+                if (line.startsWith(startPattern)) {
+                    foundStart = true;
+                    contentBuilder.append(line).append("\n");
+                } else if (foundStart) {
+                    if (line.endsWith(endPattern)) {
+                        contentBuilder.append(line);
+                        System.out.println(contentBuilder.toString());
+                        foundStart = false;
+                    } else {
+                        contentBuilder.append(line).append("\n");
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-//         return contentBuilder;
-//     }
-// }
+        return contentBuilder;
+    }
+}
