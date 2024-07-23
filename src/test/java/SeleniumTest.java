@@ -20,7 +20,7 @@ import org.openqa.selenium.JavascriptExecutor;
 public class SeleniumTest {
 
     private static StringBuilder foodClass;
-    private WebDriver webDriver;
+    private static WebDriver webDriver;
    
 
     @BeforeEach
