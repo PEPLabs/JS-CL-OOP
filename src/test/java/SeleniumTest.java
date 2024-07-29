@@ -81,7 +81,7 @@ public class SeleniumTest {
 
 }
 
-class TestingUtils {
+class foodClass {
     public static StringBuilder getFoodClass() {
         String filePath = "./src/main/java/index.js";
         String startPattern = "class FoodProduct";
