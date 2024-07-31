@@ -25,6 +25,7 @@ public class SeleniumTest {
 
     @BeforeEach
     public void setUp() {
+        foodClass = TestingUtils.getFoodClass();
         
         // Set up ChromeDriver path
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver");//linux_64
@@ -81,7 +82,7 @@ public class SeleniumTest {
 
 }
 
-class foodClass {
+class TestingUtils {
     public static StringBuilder getFoodClass() {
         String filePath = "./src/main/java/index.js";
         String startPattern = "class FoodProduct";
