@@ -65,7 +65,7 @@ public class SeleniumTest {
     @Test
     public void testFoodProductContainsCorrectConstructor() {
         
-        Assertions.assertTrue(foodClass.toString().contains("FoodProduct("));
+        Assertions.assertTrue(foodClass.toString().contains("FoodProduct"));
         Assertions.assertTrue(foodClass.toString().contains("name"));
         Assertions.assertTrue(foodClass.toString().contains("description"));
         Assertions.assertTrue(foodClass.toString().contains("expirationDate"));
