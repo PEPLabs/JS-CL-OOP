@@ -1,0 +1,30 @@
+{
+  "type": "java",
+  "testFiles": [
+    {
+      "path": "src/test/java/SeleniumTest.java",
+      "testCases": [
+        {
+          "methodName": "testFoodProductIsSubclass",
+          "label": "FoodProduct extends Product",
+          "description": "Reads the FoodProduct class definition from src/main/java/index.js and asserts that the text contains 'FoodProduct extends Product', ensuring FoodProduct is a subclass of Product."
+        },
+        {
+          "methodName": "testFoodProductContainsCorrectState",
+          "label": "FoodProduct has expirationDate state",
+          "description": "Asserts that the FoodProduct class text contains the private field '#expirationDate', verifying that the expirationDate state is defined."
+        },
+        {
+          "methodName": "testFoodProductContainsCorrectConstructor",
+          "label": "FoodProduct constructor and parameters",
+          "description": "Checks that the FoodProduct class text includes the constructor name 'FoodProduct' and parameters 'name', 'description', and 'expirationDate', and that the constructor assigns 'this.#expirationDate'."
+        },
+        {
+          "methodName": "testFoodProductContainsCorrectMutators",
+          "label": "FoodProduct getters and setters",
+          "description": "Verifies that the FoodProduct class defines 'getExpirationDate()' and 'setExpirationDate(...)' methods and references 'expirationDate', confirming the presence of proper accessor and mutator methods."
+        }
+      ]
+    }
+  ]
+}
